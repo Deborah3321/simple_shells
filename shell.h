@@ -149,8 +149,8 @@ char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
 /* toem_tokenizer.c */
-char _strtor(char *, char *);
-char _strtor2(char *, char);
+char **_strtor(char *, char *);
+char **_strtor2(char *, char);
 
 /* toem_reallocation.c */
 char *_memset(char *, char, unsigned int);

@@ -24,7 +24,7 @@ void set_info(info_t *info, char **av)
 	info->fname = av[0];
 	if (info->arg)
 	{
-		info->argv = strtor(info->arg, " \t");
+		info->argv = _strtor(info->arg, " \t");
 		if (!info->argv)
 		{
 

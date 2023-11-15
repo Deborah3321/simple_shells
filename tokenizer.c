@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * _strtor - splits a string into words. Repeat delimiters are ignored
+ * **_strtor - splits a string into words. Repeat delimiters are ignored
  * @str: the input string
  * @delim: the delimeter string
  * Return: a pointer to an array of strings, or NULL on failure
  */
 
-char _strtor(char *str, char *delim)
+char **_strtor(char *str, char *delim)
 {
 	int a, b, c, n, w_count = 0;
 	char **string;
@@ -22,7 +22,7 @@ char _strtor(char *str, char *delim)
 
 	if (w_count == 0)
 		return (NULL);
-	s = malloc((1 + w_count) * sizeof(char *));
+	string = malloc((1 + w_count) * sizeof(char *));
 	if (!string)
 		return (NULL);
 	for (a = 0, b = 0; b < w_count; b++)
@@ -49,12 +49,12 @@ char _strtor(char *str, char *delim)
 }
 
 /**
- * _strtor2 - splits a string into words
+ * **_strtor2 - splits a string into words
  * @str: the input string
  * @delim: the delimeter
  * Return: a pointer to an array of strings, or NULL on failure
  */
-char _strtor2(char *str, char delim)
+char **_strtor2(char *str, char delim)
 {
 	int a, b, c, n, w_count = 0;
 	char **string;
